@@ -34,3 +34,9 @@ DATABASE_URL="postgresql://postgres:[YOUR-PASSWORD]@db.your-project-ref.supabase
 ```
 
 这样 Vercel 的后端 API 就能连接 Supabase Postgres。
+
+Supabase 部署到 Vercel 时更推荐使用 Transaction pooler 连接串，例如：
+
+```bash
+DATABASE_URL="postgresql://postgres.your-project-ref:[YOUR-PASSWORD]@aws-1-ap-southeast-1.pooler.supabase.com:6543/postgres"
+```
