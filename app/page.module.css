@@ -1,0 +1,155 @@
+.shell {
+  min-height: 100vh;
+  padding: 56px 24px;
+}
+
+.header,
+.grid,
+.status {
+  width: min(980px, 100%);
+  margin: 0 auto;
+}
+
+.header {
+  margin-bottom: 28px;
+}
+
+.kicker {
+  margin: 0 0 10px;
+  color: #2d6cdf;
+  font-size: 0.9rem;
+  font-weight: 700;
+}
+
+.header h1 {
+  margin: 0;
+  font-size: clamp(2rem, 5vw, 4rem);
+  line-height: 1.05;
+}
+
+.header p:last-child {
+  max-width: 680px;
+  margin: 18px 0 0;
+  color: #5a6578;
+  font-size: 1.05rem;
+  line-height: 1.7;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 18px;
+}
+
+.panel {
+  min-height: 360px;
+  padding: 24px;
+  border: 1px solid #dce3ef;
+  border-radius: 8px;
+  background: #ffffff;
+  box-shadow: 0 18px 44px rgba(33, 43, 67, 0.08);
+}
+
+.panelTitle {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+}
+
+.panel h2 {
+  margin: 0 0 22px;
+  font-size: 1.2rem;
+}
+
+.panelTitle h2 {
+  margin: 0;
+}
+
+.panelTitle button,
+.primaryButton {
+  min-height: 42px;
+  padding: 0 16px;
+  border-radius: 7px;
+  background: #172033;
+  color: #ffffff;
+  font-weight: 700;
+}
+
+.panelTitle button {
+  background: #edf3ff;
+  color: #1e57b7;
+}
+
+.result {
+  margin: 24px 0 0;
+}
+
+.result div {
+  padding: 16px 0;
+  border-top: 1px solid #edf0f6;
+}
+
+.result dt {
+  margin-bottom: 6px;
+  color: #6d7788;
+  font-size: 0.82rem;
+}
+
+.result dd {
+  margin: 0;
+  line-height: 1.6;
+  overflow-wrap: anywhere;
+}
+
+.field {
+  display: grid;
+  gap: 8px;
+  margin-bottom: 18px;
+  color: #364153;
+  font-weight: 700;
+}
+
+.field input {
+  width: 100%;
+  min-height: 46px;
+  padding: 0 14px;
+  border: 1px solid #cfd8e8;
+  border-radius: 7px;
+  color: #172033;
+}
+
+.field input:focus {
+  border-color: #2d6cdf;
+  outline: 3px solid rgba(45, 108, 223, 0.14);
+}
+
+.primaryButton {
+  width: 100%;
+  margin-top: 8px;
+  background: #2d6cdf;
+}
+
+.primaryButton:disabled {
+  cursor: progress;
+  opacity: 0.68;
+}
+
+.status {
+  margin-top: 18px;
+  color: #5a6578;
+}
+
+@media (max-width: 760px) {
+  .shell {
+    padding: 34px 16px;
+  }
+
+  .grid {
+    grid-template-columns: 1fr;
+  }
+
+  .panel {
+    min-height: auto;
+  }
+}
